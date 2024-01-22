@@ -19,20 +19,25 @@ public abstract class BaseSystemUtilTask
 {
 	// static
 	
-	private static final Logger _Logger =
-		Logger.getLogger(BaseSystemUtilTask.class.getName());
+	public static final Logger _Logger = Logger.getLogger(BaseSystemUtilTask.class.getName());
 	
 	
 	// private
 	
 	private String name   = ConfigConst.NOT_SET;
-	private int    typeID = ConfigConst.DEFAULT_TYPE_ID;
+	private int typeID = ConfigConst.DEFAULT_TYPE_ID;
 	
 	// constructors
 	
 	public BaseSystemUtilTask(String name, int typeID)
 	{
 		super();
+	
+		if (name != null) {
+			this.name = name;
+		}
+	
+		this.typeID = typeID;
 	}
 	
 	
@@ -40,7 +45,12 @@ public abstract class BaseSystemUtilTask
 	
 	public String getName()
 	{
-		return null;
+		return this.name;
+	}
+
+	public int getTypeID()
+	{
+    	return this.typeID;
 	}
 	
 	/**
