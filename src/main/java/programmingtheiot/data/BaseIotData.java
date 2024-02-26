@@ -323,7 +323,6 @@ public abstract class BaseIotData implements Serializable
 		}
 	}
 	
-	
 	// protected methods
 	
 	/**
