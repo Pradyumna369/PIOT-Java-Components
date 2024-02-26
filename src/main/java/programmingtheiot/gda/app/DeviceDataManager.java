@@ -184,7 +184,9 @@ public class DeviceDataManager implements IDataMessageListener
 	public void startManager()
 	{
 		_Logger.info("Starting device data manager");
+		_Logger.info("checking if sysPerfMgr instance is not null");
 		if (this.sysPerfMgr != null) {
+			_Logger.info("sysPerfMgr instance is not null");
 			this.sysPerfMgr.startManager();
 		}
 	}
@@ -192,7 +194,9 @@ public class DeviceDataManager implements IDataMessageListener
 	public void stopManager()
 	{
 		_Logger.info("Stopping device data manager");
+		_Logger.info("checking if sysPerfMgr instance is not null");
 		if (this.sysPerfMgr != null) {
+			_Logger.info("sysPerfMgr instance is not null");
 			this.sysPerfMgr.stopManager();
 		}
 	}
@@ -212,7 +216,9 @@ public class DeviceDataManager implements IDataMessageListener
 		this.enableSystemPerf =
 			configUtil.getBoolean(ConfigConst.GATEWAY_DEVICE,  ConfigConst.ENABLE_SYSTEM_PERF_KEY);
 		
+			_Logger.info("In initManager");
 		if (this.enableSystemPerf) {
+			_Logger.info("enableSystemPerf is true");
 			this.sysPerfMgr = new SystemPerformanceManager();
 			this.sysPerfMgr.setDataMessageListener(this);
 		}
