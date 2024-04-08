@@ -250,11 +250,11 @@ public class MqttClientConnector implements IPubSubClient, MqttCallbackExtended
 		return false;
 	}
 
-	@Override
+	/*@Override
 	public boolean setConnectionListener(IConnectionListener listener)
 	{
 		return false;
-	}
+	}*/
 	
 	@Override
 	public boolean setDataMessageListener(IDataMessageListener listener)
