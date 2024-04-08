@@ -25,6 +25,8 @@ import programmingtheiot.common.IDataMessageListener;
 import programmingtheiot.common.ResourceNameEnum;
 import programmingtheiot.gda.connection.handlers.GenericCoapResourceHandler;
 import programmingtheiot.gda.connection.handlers.GetActuatorCommandResourceHandler;
+import programmingtheiot.gda.connection.handlers.UpdateSystemPerformanceResourceHandler;
+import programmingtheiot.gda.connection.handlers.UpdateTelemetryResourceHandler;
 
 /**
  * Provides CoAP server functionality and host local resource implementations
@@ -52,6 +54,18 @@ public class CoapServerGateway
 	 * @param dataMsgListener
 	 */
 	public CoapServerGateway(IDataMessageListener dataMsgListener)
+	{
+		super();
+		
+		/*
+		 * Basic constructor implementation provided. Change as needed.
+		 */
+		
+		this.dataMsgListener = dataMsgListener;
+		
+		initServer();
+	}
+	public CoapServerGateway()
 	{
 		super();
 		

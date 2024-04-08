@@ -58,10 +58,10 @@ public abstract class BaseSystemUtilTask
 	 * 
 	 * @return int
 	 */
-	public int getTypeID()
-	{
-		return 0;
-	}
+	// public int getTypeID()
+	// {
+	// 	return 0;
+	// }
 	
 	/**
 	 * Template method definition. Sub-class will implement this to retrieve

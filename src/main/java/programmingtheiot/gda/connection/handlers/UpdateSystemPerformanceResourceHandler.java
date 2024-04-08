@@ -18,18 +18,20 @@ import programmingtheiot.common.ConfigConst;
 import programmingtheiot.common.ConfigUtil;
 import programmingtheiot.common.IDataMessageListener;
 import programmingtheiot.common.ResourceNameEnum;
+import programmingtheiot.data.DataUtil;
+import programmingtheiot.data.SystemPerformanceData;
 
 
 /**
  * Allows the CDA to send PUT requests for SensorData and SystemPerformanceData to GDA
  *
  */
-public class GenericCoapResourceHandler extends CoapResource
+public class UpdateSystemPerformanceResourceHandler extends CoapResource
 {
 	// static
 	
 	private static final Logger _Logger =
-		Logger.getLogger(GenericCoapResourceHandler.class.getName());
+		Logger.getLogger(UpdateSystemPerformanceResourceHandler.class.getName());
     
     private IDataMessageListener dataMsgListener = null;
 	
@@ -43,7 +45,7 @@ public class GenericCoapResourceHandler extends CoapResource
 	 * 
 	 * @param resource Basically, the path (or topic)
 	 */
-	public GenericCoapResourceHandler(ResourceNameEnum resource)
+	public UpdateSystemPerformanceResourceHandler(ResourceNameEnum resource)
 	{
 		this(resource.getResourceName());
 	}
@@ -117,7 +119,7 @@ public class GenericCoapResourceHandler extends CoapResource
         String msg =
             "Update system perf data request handled: " + super.getName();
         
-        context.respond(code, msg)
+        context.respond(code, msg);
 	}
 	
 	public void setDataMessageListener(IDataMessageListener listener)
