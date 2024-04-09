@@ -36,6 +36,7 @@ import programmingtheiot.common.IDataMessageListener;
      
      // params    
      private ActuatorData actuatorData = null;
+     private IDataMessageListener dataMsgListener = null;
      // constructors
      
      /**
@@ -46,6 +47,7 @@ import programmingtheiot.common.IDataMessageListener;
      public GetActuatorCommandResourceHandler(ResourceNameEnum resource)
      {
          this(resource.getResourceName());
+         
      }
      
      /**
@@ -66,6 +68,16 @@ import programmingtheiot.common.IDataMessageListener;
      @Override
      public void handleDELETE(CoapExchange context)
      {
+        // accept the request
+        context.accept();
+        
+        // TODO: convert the locally stored ActuatorData to JSON using DataUtil
+        String jsonData = DataUtil.getInstance().actuatorDataToJson(this.actuatorData);
+
+        // TODO: generate a response message, set the content type, and set the response code
+
+        // send an appropriate response
+        context.respond(ResponseCode.CONTENT, jsonData);
      }
      
      @Override
@@ -88,17 +100,40 @@ import programmingtheiot.common.IDataMessageListener;
      @Override
      public void handlePOST(CoapExchange context)
      {
+        // accept the request
+        context.accept();
+        
+        // TODO: convert the locally stored ActuatorData to JSON using DataUtil
+        String jsonData = DataUtil.getInstance().actuatorDataToJson(this.actuatorData);
+
+        // TODO: generate a response message, set the content type, and set the response code
+
+        // send an appropriate response
+        context.respond(ResponseCode.CONTENT, jsonData);
      }
      
      @Override
      public void handlePUT(CoapExchange context)
      {
+        // accept the request
+        context.accept();
+        
+        // TODO: convert the locally stored ActuatorData to JSON using DataUtil
+        String jsonData = DataUtil.getInstance().actuatorDataToJson(this.actuatorData);
+
+        // TODO: generate a response message, set the content type, and set the response code
+
+        // send an appropriate response
+        context.respond(ResponseCode.CONTENT, jsonData);
      }
      
-     public void setDataMessageListener(IDataMessageListener listener)
-     {
-     }
-     public boolean onActuatorDataUpdate(ActuatorData data)
+    public void setDataMessageListener(IDataMessageListener listener)
+    {
+        if (listener != null) {
+            this.dataMsgListener = listener;
+        }
+    }
+    public boolean onActuatorDataUpdate(ActuatorData data)
     {
         if (data != null && this.actuatorData != null) {
             this.actuatorData.updateData(data);
