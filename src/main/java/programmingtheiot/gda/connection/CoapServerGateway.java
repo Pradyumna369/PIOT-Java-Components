@@ -146,7 +146,7 @@ public class CoapServerGateway
 		try {
 		if (this.coapServer != null) {
 			this.coapServer.start();
-			
+			_Logger.info("Started CoAP Server......");
 			// for message logging
 			for (Endpoint ep : this.coapServer.getEndpoints()) {
 				ep.addInterceptor(new MessageTracer());

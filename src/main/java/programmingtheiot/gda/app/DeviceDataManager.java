@@ -220,7 +220,7 @@ public class DeviceDataManager implements IDataMessageListener
 		//Updating DeviceDataManager with reference to CoapServerGateway
 		if (this.enableCoapServer && this.coapServer != null) {
 			if (this.coapServer.startServer()) {
-				_Logger.info("CoAP server started.");
+				_Logger.info("CoAP server has started ........");
 			} else {
 				_Logger.severe("Failed to start CoAP server. Check log file for details.");
 			}
