@@ -198,6 +198,12 @@ public class ConfigConst
 	public static final String ENABLE_SMTP_CLIENT_KEY        = "enableSmtpClient";
 	public static final String ENABLE_PERSISTENCE_CLIENT_KEY = "enablePersistenceClient";
 	public static final String ENABLE_SYSTEM_PERF_KEY        = "enableSystemPerformance";
+	public static final String HANDLE_HUMIDITY_CHANGE_ON_DEVICE        = "handleHumidityChangeOnDevice";
+	public static final String HUMIDITY_MAX_TIME_PAST_THRESHOLD        = "humidityMaxTimePastThreshold";
+	public static final String NOMINAL_HUMIDITY_SETTING       = "nominalHumiditySetting";
+	public static final String TRIGGER_HUMIDIFIER_FLOOR        = "triggerHumidifierFloor";
+	public static final String TRIGGER_HUMIDIFIER_CEILING        = "triggerHumidifierCeiling"; 
+
 	
 	public static final String ENABLE_RUN_FOREVER_KEY        = "enableRunForever";
 	
