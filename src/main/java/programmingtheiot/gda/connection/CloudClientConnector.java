@@ -30,7 +30,12 @@ public class CloudClientConnector implements ICloudClient
 		Logger.getLogger(CloudClientConnector.class.getName());
 	
 	// private var's
-	
+	private String topicPrefix = "";
+	private MqttClientConnector mqttClient = null;
+	private IDataMessageListener dataMsgListener = null;
+
+	// TODO: set to either 0 or 1, depending on which is preferred for your implementation
+	private int qosLevel = 1;
 	
 	// constructors
 	
@@ -40,8 +45,20 @@ public class CloudClientConnector implements ICloudClient
 	 */
 	public CloudClientConnector()
 	{
-		super();
+		ConfigUtil configUtil = ConfigUtil.getInstance();
 		
+		this.topicPrefix =
+			configUtil.getProperty(ConfigConst.CLOUD_GATEWAY_SERVICE, ConfigConst.BASE_TOPIC_KEY);
+		
+		// Depending on the cloud service, the topic names may or may not begin with a "/", so this code
+		// should be updated according to the cloud service provider's topic naming conventions
+		if (topicPrefix == null) {
+			topicPrefix = "/";
+		} else {
+			if (! topicPrefix.endsWith("/")) {
+				topicPrefix += "/";
+			}
+		}
 	}
 	
 	

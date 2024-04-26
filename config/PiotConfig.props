@@ -11,13 +11,13 @@
 # Cloud client configuration information
 #
 [Cloud.GatewayService]
-credFile       = ./cred/PiotCloudCred.props
-certFile       = /Users/pradyumna/Desktop/ConnectedDevices/certs/server.crt
+credFile       = /Users/pradyumna/Desktop/ConnectedDevices/java-components/token.props
+certFile       = /Users/pradyumna/Desktop/ConnectedDevices/java-components/ubidots.pem
 host           = localhost
 port           = 1883
 securePort     = 8883
 defaultQoS     = 0
-keepAlive      = 60
+keepAlive      = 30
 useAsyncClient = True
 enableAuth     = True
 enableCrypt    = True
