@@ -172,10 +172,10 @@ public class ConfigConst
 	 */
 	
 	public static final String DEFAULT_CONFIG_FILE_NAME      = "/Users/pradyumna/Desktop/ConnectedDevices/java-components/config/PiotConfig.props";
-	public static final String DEFAULT_CRED_FILE_NAME        = "./cred/PiotCred.props";
+	public static final String DEFAULT_CRED_FILE_NAME        = "/Users/pradyumna/Desktop/ConnectedDevices/token.props";
 	public static final String DEFAULT_KEY_STORE_FILE_NAME   = "./cred/KeyStore.jks";
 	public static final String DEFAULT_TRUST_STORE_FILE_NAME = "./cred/TrustStore.jks";
-	public static final String DEFAULT_CERT_FILE_NAME        = "./cert/PiotCert.pem";
+	public static final String DEFAULT_CERT_FILE_NAME        = "/Users/pradyumna/Desktop/ConnectedDevices/ubidots.pem";
 	
 	public static final int DEFAULT_QOS = 0;
 	

@@ -11,18 +11,18 @@
 # Cloud client configuration information
 #
 [Cloud.GatewayService]
-credFile       = /Users/pradyumna/Desktop/ConnectedDevices/java-components/token.props
-certFile       = /Users/pradyumna/Desktop/ConnectedDevices/java-components/ubidots.pem
-host           = localhost
+credFile       = /Users/pradyumna/Desktop/ConnectedDevices/token.props
+certFile       = /Users/pradyumna/Desktop/ConnectedDevices/ubidots.pem
+host           = industrial.api.ubidots.com
 port           = 1883
 securePort     = 8883
 defaultQoS     = 0
 keepAlive      = 30
 useAsyncClient = True
-enableAuth     = True
+enableAuth     = False
 enableCrypt    = True
-baseUrl        = 
-baseTopic      = 
+baseUrl        = https://things.ubidots.com/api/v1.6/
+baseTopic      = /v1.6/devices/
 
 #
 # SMTP client configuration information
@@ -48,7 +48,7 @@ defaultQoS     = 0
 keepAlive      = 60
 enableAuth     = False
 enableCrypt    = False
-useAsyncClient = False
+useAsyncClient = True
 
 #
 # CoAP client and server configuration information
@@ -73,13 +73,14 @@ pollCycleSecs           = 30
 enableMqttClient        = True
 enableCoapServer        = False
 enableCoapClient        = False
-enableCloudClient       = False
+enableCloudClient       = True
 enableSmtpClient        = False
 enablePersistenceClient = False
 enableSystemPerformance = True
 testGdaDataPath         = /tmp/gda-data
 testCdaDataPath         = /tmp/cda-data
 testEmptyApp            = False
+enableRunForever        = True
 
 # if true, GDA will process humidity change events from CDA
 handleHumidityChangeOnDevice = True
