@@ -10,6 +10,7 @@ package programmingtheiot.gda.connection;
 
 import programmingtheiot.common.IDataMessageListener;
 import programmingtheiot.common.ResourceNameEnum;
+import programmingtheiot.data.ActuatorData;
 import programmingtheiot.data.SensorData;
 import programmingtheiot.data.SystemPerformanceData;
 
@@ -56,6 +57,8 @@ public interface ICloudClient
 	 * @return bool True on success, False otherwise.
 	 */
 	public boolean sendEdgeDataToCloud(ResourceNameEnum resource, SystemPerformanceData data);
+
+	public boolean sendEdgeDataToCloud(ResourceNameEnum resource, ActuatorData data);
 
 	/**
 	 * Attempts to subscribe to events destined for edge consumption that are
