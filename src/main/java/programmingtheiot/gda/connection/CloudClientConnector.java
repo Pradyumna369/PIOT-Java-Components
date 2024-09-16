@@ -19,7 +19,7 @@ import programmingtheiot.data.DataUtil;
 import programmingtheiot.data.SensorData;
 import programmingtheiot.data.SystemPerformanceData;
 /**
-* Shell representation of class for student implementation.
+* Class to connect client to cloud
 *
 */
 public class CloudClientConnector implements ICloudClient, IConnectionListener
