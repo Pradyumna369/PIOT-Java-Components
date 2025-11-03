@@ -28,7 +28,7 @@ Test-Driven Development: Includes JUnit test skeletons organized by module (Part
 
 Build Automation: Managed using Apache Maven for dependency resolution and modular builds.
 
-🛠 Tech Stack
+Tech Stack
 Category	Tools / Frameworks
 Language	Java 11+
 Build System	Apache Maven
