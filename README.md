@@ -1,12 +1,18 @@
 PIOT-Java-Components
+PIOT-Java-Components is a Java-based IoT framework that models how real-world connected devices communicate securely with gateways and cloud platforms.
+It was developed as part of the Programming the Internet of Things (PIoT) system architecture coursework, and demonstrates how to build modular, object-oriented software for device-to-cloud integration.
 
-PIOT-Java-Components is a modular Java framework designed to support device-to-cloud IoT communication, configuration management, and data exchange.
-It serves as a foundation for building scalable IoT systems and demonstrates strong object-oriented design, multi-protocol communication (MQTT, CoAP), and cloud integration concepts.
+The project includes components for:
 
-Overview
+Device communication (sensors, actuators, telemetry handling)
 
-This project showcases the core building blocks of an IoT ecosystem — including device clients, gateway controllers, configuration modules, and testing scaffolds — implemented in Java.
-Developed as part of the Programming the Internet of Things (PIoT) coursework, the repository focuses on modularity, reusability, and extensibility, following clean coding and software design principles.
+Gateway-cloud messaging via MQTT and CoAP
+
+Configuration management, data serialization, and test automation using JUnit
+
+Secure connectivity through the AWS IoT SDK and TLS certificates
+
+It showcases strong understanding of IoT architecture, Java design patterns, and scalable backend design, with a focus on clean modular interfaces and extensibility for real-world systems.
 
 Key Highlights
 
