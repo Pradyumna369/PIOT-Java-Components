@@ -39,36 +39,8 @@ Data Handling	Gson (JSON serialization)
 Configuration	Apache Commons Configuration
 Testing	JUnit 5
 Version Control	Git / GitHub
-📂 Project Structure
-PIOT-Java-Components/
-│
-├── config/                 # Configuration templates
-├── src/
-│   ├── main/java/          # Shell classes & core logic
-│   └── test/java/          # JUnit test scaffolds (Parts 1–4)
-├── pom.xml                 # Maven dependencies & build config
-└── README.md
 
-⚙️ Getting Started
-
-Clone and build
-
-git clone https://github.com/Pradyumna369/PIOT-Java-Components.git
-cd PIOT-Java-Components
-mvn clean install
-
-
-Explore and implement
-
-Open src/main/java to view shell classes for each IoT component.
-
-Follow the test cases under src/test/java to verify your implementations.
-
-Run tests
-
-mvn test
-
-💡 Learning Outcomes
+Learning Outcomes:
 
 Through this project, I developed hands-on experience in:
 
@@ -82,12 +54,3 @@ Managing project dependencies, builds, and testing with Maven and JUnit.
 
 Following clean code principles for scalable IoT component design.
 
-🔭 Future Enhancements
-
-Add REST API layer for device telemetry data.
-
-Integrate containerized deployment using Docker.
-
-Extend to support additional protocols (HTTP, WebSocket).
-
-Build analytics module for telemetry visualization.
